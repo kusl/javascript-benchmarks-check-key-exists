@@ -18,6 +18,12 @@ summary
 | "key" in testObj | 199 | 948 | 572 |
 | hasOwnProperty | 213 | 746 | 466 |
 
+| Operation | Chromium (ms) | WebKit (ms) | Firefox (ms) |
+| --- | --- | --- | --- |
+| == undefined | 302 | 1690 | 2610 |
+| "key" in testObj | 209 | 931 | 792 |
+| hasOwnProperty | 201 | 706 | 618 |
+
 
 
 [details="detailed results"]
