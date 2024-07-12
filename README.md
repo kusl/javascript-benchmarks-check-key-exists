@@ -6,6 +6,14 @@ summary
 | "key" in testObj | 377 | 801 | 756 |
 | hasOwnProperty | 228 | 805 | 547 |
 
+| Operation | Chromium (ms) | WebKit (ms) | Firefox (ms) |
+| --- | --- | --- | --- |
+| == undefined | 384 | 1680 | 2730 |
+| "key" in testObj | 262 | 843 | 678 |
+| hasOwnProperty | 239 | 778 | 517 |
+
+
+
 [details="detailed results"]
 PS C:\Users\kushal\src\myhtml\javascript-benchmarks-check-key-exists> node run-tests-loop.js
 Iteration 8:
