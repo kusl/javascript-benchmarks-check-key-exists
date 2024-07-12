@@ -23,10 +23,12 @@ function testPerformance(fn, iterations = 10000) {
         times.push(Number(end - start));
     }
     times.sort((a, b) => a - b);
+    const min = times[0];
+    const max = times[times.length - 1];
     const median = times[Math.floor(times.length / 2)];
     const ninetiethPercentile = times[Math.floor(times.length * 0.9)];
     const ninetyNinthPercentile = times[Math.floor(times.length * 0.99)];
-    return { median, ninetiethPercentile, ninetyNinthPercentile };
+    return { min, max, median, ninetiethPercentile, ninetyNinthPercentile };
 }
 
 const test1 = () => {
@@ -54,6 +56,6 @@ const test1Results = testPerformance(test1);
 const test2Results = testPerformance(test2);
 const test3Results = testPerformance(test3);
 
-console.log(`== undefined - Median: ${test1Results.median} ns, 90th Percentile: ${test1Results.ninetiethPercentile} ns, 99th Percentile: ${test1Results.ninetyNinthPercentile} ns`);
-console.log(`in - Median: ${test2Results.median} ns, 90th Percentile: ${test2Results.ninetiethPercentile} ns, 99th Percentile: ${test2Results.ninetyNinthPercentile} ns`);
-console.log(`hasOwnProperty - Median: ${test3Results.median} ns, 90th Percentile: ${test3Results.ninetiethPercentile} ns, 99th Percentile: ${test3Results.ninetyNinthPercentile} ns`);
+console.log(`== undefined - Min: ${test1Results.min} ns, Max: ${test1Results.max} ns, Median: ${test1Results.median} ns, 90th Percentile: ${test1Results.ninetiethPercentile} ns, 99th Percentile: ${test1Results.ninetyNinthPercentile} ns`);
+console.log(`in - Min: ${test2Results.min} ns, Max: ${test2Results.max} ns, Median: ${test2Results.median} ns, 90th Percentile: ${test2Results.ninetiethPercentile} ns, 99th Percentile: ${test2Results.ninetyNinthPercentile} ns`);
+console.log(`hasOwnProperty - Min: ${test3Results.min} ns, Max: ${test3Results.max} ns, Median: ${test3Results.median} ns, 90th Percentile: ${test3Results.ninetiethPercentile} ns, 99th Percentile: ${test3Results.ninetyNinthPercentile} ns`);
