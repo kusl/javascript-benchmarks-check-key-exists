@@ -1,3 +1,12 @@
+executive summary 
+
+| Operation        | Chromium (ms) | WebKit (ms) | Firefox (ms) |
+| ---------------- | ------------- | ----------- | ------------ |
+| == undefined     | 359           | 1804        | 2746         |
+| "key" in testObj | 256           | 884         | 688          |
+| hasOwnProperty   | 218           | 750         | 529          |
+
+
 summary 
 
 | Operation | Chromium (ms) | WebKit (ms) | Firefox (ms) |
