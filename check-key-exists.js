@@ -16,11 +16,19 @@ const testObj = {
 
 function testPerformance(fn, iterations = 10000) {
     const times = [];
+    // Warm-up iterations
+    for (let i = 0; i < 1000; i++) {
+        fn();
+    }
+    // Actual measurement
     for (let i = 0; i < iterations; i++) {
         const start = process.hrtime.bigint();
         fn();
         const end = process.hrtime.bigint();
-        times.push(Number(end - start));
+        const duration = Number(end - start);
+        if (duration > 0) {
+            times.push(duration);
+        }
     }
     times.sort((a, b) => a - b);
     const min = times[0];
