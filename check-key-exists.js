@@ -14,13 +14,19 @@ const testObj = {
     ssss: 2828, tttt: 'share', uuuu: 2929, vvvv: 'part', wwww: 3030, xxxx: 'piece', yyyy: 3131, zzzz: 'segment'
 };
 
-function testPerformance(fn, iterations = 1000000) {
-    const start = process.hrtime.bigint();
+function testPerformance(fn, iterations = 10000) {
+    const times = [];
     for (let i = 0; i < iterations; i++) {
+        const start = process.hrtime.bigint();
         fn();
+        const end = process.hrtime.bigint();
+        times.push(Number(end - start));
     }
-    const end = process.hrtime.bigint();
-    return (end - start) / BigInt(iterations);
+    times.sort((a, b) => a - b);
+    const median = times[Math.floor(times.length / 2)];
+    const ninetiethPercentile = times[Math.floor(times.length * 0.9)];
+    const ninetyNinthPercentile = times[Math.floor(times.length * 0.99)];
+    return { median, ninetiethPercentile, ninetyNinthPercentile };
 }
 
 const test1 = () => {
@@ -44,6 +50,10 @@ const test3 = () => {
     }
 };
 
-console.log(`test1 average time: ${testPerformance(test1)} nanoseconds`);
-console.log(`test2 average time: ${testPerformance(test2)} nanoseconds`);
-console.log(`test3 average time: ${testPerformance(test3)} nanoseconds`);
+const test1Results = testPerformance(test1);
+const test2Results = testPerformance(test2);
+const test3Results = testPerformance(test3);
+
+console.log(`== undefined - Median: ${test1Results.median} ns, 90th Percentile: ${test1Results.ninetiethPercentile} ns, 99th Percentile: ${test1Results.ninetyNinthPercentile} ns`);
+console.log(`in - Median: ${test2Results.median} ns, 90th Percentile: ${test2Results.ninetiethPercentile} ns, 99th Percentile: ${test2Results.ninetyNinthPercentile} ns`);
+console.log(`hasOwnProperty - Median: ${test3Results.median} ns, 90th Percentile: ${test3Results.ninetiethPercentile} ns, 99th Percentile: ${test3Results.ninetyNinthPercentile} ns`);
