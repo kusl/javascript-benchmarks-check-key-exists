@@ -1,3 +1,5 @@
+const { test, expect } = require('@playwright/test');
+
 const testObj = {
     a: 28, b: 82, c: "hello", d: 983, e: 'lara', o: "key", f: '82828', g: 8,
     h: 45, i: "world", j: 123, k: 'test', l: 999, m: 'data', n: 456, p: 'value',
@@ -14,7 +16,7 @@ const testObj = {
     ssss: 2828, tttt: 'share', uuuu: 2929, vvvv: 'part', wwww: 3030, xxxx: 'piece', yyyy: 3131, zzzz: 'segment'
 };
 
-function testPerformance(fn, iterations = 10000) {
+function testPerformance(fn, iterations = 1000000000) {
     const times = [];
     // Warm-up iterations
     for (let i = 0; i < 1000; i++) {
@@ -22,10 +24,10 @@ function testPerformance(fn, iterations = 10000) {
     }
     // Actual measurement
     for (let i = 0; i < iterations; i++) {
-        const start = process.hrtime.bigint();
+        const start = performance.now();
         fn();
-        const end = process.hrtime.bigint();
-        const duration = Number(end - start);
+        const end = performance.now();
+        const duration = end - start;
         if (duration > 0) {
             times.push(duration);
         }
@@ -60,10 +62,25 @@ const test3 = () => {
     }
 };
 
-const test1Results = testPerformance(test1);
-const test2Results = testPerformance(test2);
-const test3Results = testPerformance(test3);
+test.describe('Performance Tests', () => {
+    test('== undefined', async ({ page }) => {
+        await page.evaluate(({ testObj, testPerformance, test1 }) => {
+            const test1Results = testPerformance(test1);
+            console.log(`== undefined - Min: ${test1Results.min} ms, Max: ${test1Results.max} ms, Median: ${test1Results.median} ms, 90th Percentile: ${test1Results.ninetiethPercentile} ms, 99th Percentile: ${test1Results.ninetyNinthPercentile} ms`);
+        }, { testObj, testPerformance, test1 });
+    });
 
-console.log(`== undefined - Min: ${test1Results.min} ns, Max: ${test1Results.max} ns, Median: ${test1Results.median} ns, 90th Percentile: ${test1Results.ninetiethPercentile} ns, 99th Percentile: ${test1Results.ninetyNinthPercentile} ns`);
-console.log(`in - Min: ${test2Results.min} ns, Max: ${test2Results.max} ns, Median: ${test2Results.median} ns, 90th Percentile: ${test2Results.ninetiethPercentile} ns, 99th Percentile: ${test2Results.ninetyNinthPercentile} ns`);
-console.log(`hasOwnProperty - Min: ${test3Results.min} ns, Max: ${test3Results.max} ns, Median: ${test3Results.median} ns, 90th Percentile: ${test3Results.ninetiethPercentile} ns, 99th Percentile: ${test3Results.ninetyNinthPercentile} ns`);
+    test('"key" in testObj', async ({ page }) => {
+        await page.evaluate(({ testObj, testPerformance, test2 }) => {
+            const test2Results = testPerformance(test2);
+            console.log(`in - Min: ${test2Results.min} ms, Max: ${test2Results.max} ms, Median: ${test2Results.median} ms, 90th Percentile: ${test2Results.ninetiethPercentile} ms, 99th Percentile: ${test2Results.ninetyNinthPercentile} ms`);
+        }, { testObj, testPerformance, test2 });
+    });
+
+    test('hasOwnProperty', async ({ page }) => {
+        await page.evaluate(({ testObj, testPerformance, test3 }) => {
+            const test3Results = testPerformance(test3);
+            console.log(`hasOwnProperty - Min: ${test3Results.min} ms, Max: ${test3Results.max} ms, Median: ${test3Results.median} ms, 90th Percentile: ${test3Results.ninetiethPercentile} ms, 99th Percentile: ${test3Results.ninetyNinthPercentile} ms`);
+        }, { testObj, testPerformance, test3 });
+    });
+});
