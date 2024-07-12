@@ -64,23 +64,29 @@ const test3 = () => {
 
 test.describe('Performance Tests', () => {
     test('== undefined', async ({ page }) => {
-        await page.evaluate(() => {
-            const test1Results = testPerformance(test1);
+        await page.evaluate(({ testObj, testPerformance, test1 }) => {
+            const testPerformanceFn = new Function('return ' + testPerformance)();
+            const test1Fn = new Function('return ' + test1)();
+            const test1Results = testPerformanceFn(test1Fn);
             console.log(`== undefined - Min: ${test1Results.min} ms, Max: ${test1Results.max} ms, Median: ${test1Results.median} ms, 90th Percentile: ${test1Results.ninetiethPercentile} ms, 99th Percentile: ${test1Results.ninetyNinthPercentile} ms`);
-        });
+        }, { testObj: JSON.stringify(testObj), testPerformance: testPerformance.toString(), test1: test1.toString() });
     });
 
     test('"key" in testObj', async ({ page }) => {
-        await page.evaluate(() => {
-            const test2Results = testPerformance(test2);
+        await page.evaluate(({ testObj, testPerformance, test2 }) => {
+            const testPerformanceFn = new Function('return ' + testPerformance)();
+            const test2Fn = new Function('return ' + test2)();
+            const test2Results = testPerformanceFn(test2Fn);
             console.log(`in - Min: ${test2Results.min} ms, Max: ${test2Results.max} ms, Median: ${test2Results.median} ms, 90th Percentile: ${test2Results.ninetiethPercentile} ms, 99th Percentile: ${test2Results.ninetyNinthPercentile} ms`);
-        });
+        }, { testObj: JSON.stringify(testObj), testPerformance: testPerformance.toString(), test2: test2.toString() });
     });
 
     test('hasOwnProperty', async ({ page }) => {
-        await page.evaluate(() => {
-            const test3Results = testPerformance(test3);
+        await page.evaluate(({ testObj, testPerformance, test3 }) => {
+            const testPerformanceFn = new Function('return ' + testPerformance)();
+            const test3Fn = new Function('return ' + test3)();
+            const test3Results = testPerformanceFn(test3Fn);
             console.log(`hasOwnProperty - Min: ${test3Results.min} ms, Max: ${test3Results.max} ms, Median: ${test3Results.median} ms, 90th Percentile: ${test3Results.ninetiethPercentile} ms, 99th Percentile: ${test3Results.ninetyNinthPercentile} ms`);
-        });
+        }, { testObj: JSON.stringify(testObj), testPerformance: testPerformance.toString(), test3: test3.toString() });
     });
 });
