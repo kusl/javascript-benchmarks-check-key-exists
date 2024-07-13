@@ -1,162 +1,162 @@
-const text = `Iteration 10:
+const text = `Iteration 6:
 
 Running 9 tests using 3 workers
 
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (288ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (183ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (226ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.5s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (905ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (679ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.3s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (672ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (526ms)
-
-  9 passed (8.9s)
-
-Iteration 3:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (673ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (181ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (243ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.6s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (941ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (738ms)
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.1s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.1s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (271ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (701ms)
   ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.4s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (656ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (462ms)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (530ms)
 
-  9 passed (9.0s)
-
-Iteration 5:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (235ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (311ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (169ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.9s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (918ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (750ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (3.3s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (387ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (466ms)
-
-  9 passed (9.1s)
-
-Iteration 6:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (243ms)
-  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.3s)
-  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (160ms)
-  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (168ms)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (774ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (707ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (3.2s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (438ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (488ms)
-
-  9 passed (9.2s)
-
-Iteration 8:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (459ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (223ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (236ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.7s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (800ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (595ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.8s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.0s)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (686ms)
-
-  9 passed (9.2s)
+  9 passed (10.8s)
 
 Iteration 4:
 
 Running 9 tests using 3 workers
 
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (461ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (158ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (117ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.8s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (890ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (674ms)
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.0s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.1s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (330ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.4s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (757ms)
   ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.6s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (710ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (284ms)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (796ms)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (700ms)
 
-  9 passed (9.2s)
-
-Iteration 9:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (450ms)
-  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.7s)
-  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (179ms)
-  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (265ms)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (761ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.8s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (693ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (590ms)
-
-  9 passed (9.3s)
-
-Iteration 2:
-
-Running 9 tests using 3 workers
-
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (456ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (381ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (322ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.7s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (919ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (753ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (4.3s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (506ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (528ms)
-
-  9 passed (9.3s)
+  9 passed (10.8s)
 
 Iteration 7:
 
 Running 9 tests using 3 workers
 
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (277ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (130ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (119ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.6s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (923ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (713ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.4s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (766ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (396ms)
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.1s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.1s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (308ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (788ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.3s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (982ms)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (589ms)
 
-  9 passed (9.3s)
+  9 passed (10.8s)
+
+Iteration 8:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.1s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.1s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (328ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.4s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (729ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.6s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.0s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (505ms)
+
+  9 passed (10.9s)
+
+Iteration 2:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.1s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.0s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (282ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.4s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (710ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.5s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (472ms)
+
+  9 passed (10.9s)
 
 Iteration 1:
 
 Running 9 tests using 3 workers
 
-  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (253ms)
-  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (411ms)
-  ✓  3 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (200ms)
-  ✓  4 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.9s)
-  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (790ms)
-  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (801ms)
-  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (3.0s)
-  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (582ms)
-  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (521ms)
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.2s)
+  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  3 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.3s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (336ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.0s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (715ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.7s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (957ms)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (566ms)
 
-  9 passed (9.4s)`;
+  9 passed (11.0s)
+
+Iteration 3:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.2s)
+  ✓  2 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.1s)
+  ✓  3 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (316ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (711ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.5s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (501ms)
+
+  9 passed (11.0s)
+
+Iteration 10:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.2s)
+  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  3 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.4s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (320ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (711ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.5s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (616ms)
+
+  9 passed (11.0s)
+
+Iteration 5:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (909ms)
+  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  3 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.3s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (328ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.2s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (703ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.5s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.4s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (293ms)
+
+  9 passed (11.0s)
+
+Iteration 9:
+
+Running 9 tests using 3 workers
+
+  ✓  1 [chromium] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (1.1s)
+  ✓  2 [chromium] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  3 [webkit] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.4s)
+  ✓  4 [chromium] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (339ms)
+  ✓  5 [webkit] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  6 [webkit] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (805ms)
+  ✓  7 [firefox] › check-key-exists.test.js:95:5 › Performance Tests › == undefined (2.5s)
+  ✓  8 [firefox] › check-key-exists.test.js:119:5 › Performance Tests › "key" in testObj (1.1s)
+  ✓  9 [firefox] › check-key-exists.test.js:143:5 › Performance Tests › hasOwnProperty (421ms)
+
+  9 passed (11.1s)`;
 
 const operations = ["== undefined", "\"key\" in testObj", "hasOwnProperty"];
 const browsers = ["chromium", "webkit", "firefox"];
